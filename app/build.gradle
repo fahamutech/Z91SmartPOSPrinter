@@ -1,9 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 29
     defaultConfig {
-        applicationId "com.fahamutech.z91smartpos"
+       // applicationId "com.fahamutech.z91smartpos"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
@@ -21,7 +21,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources true
+//            shrinkResources true
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
@@ -36,14 +36,14 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
-    android.applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                outputFileName = "SmartPosTest-${buildType.name}_V${defaultConfig.versionName}_${buildTime()}.apk"
-            }
-        }
-    }
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                outputFileName = "SmartPosTest-${buildType.name}_V${defaultConfig.versionName}_${buildTime()}.apk"
+//            }
+//        }
+//    }
 }
 
 dependencies {

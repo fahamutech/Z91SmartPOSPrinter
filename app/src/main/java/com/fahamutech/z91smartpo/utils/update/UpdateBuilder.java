@@ -98,7 +98,7 @@ public class UpdateBuilder {
      * 启动更新任务。可在任意线程进行启动。
      */
     public void check() {
-        Launcher.getInstance().launchCheck(this);
+       //  Launcher.getInstance().launchCheck(this);
     }
 
     /**

@@ -580,14 +580,14 @@ public class SettingsFragment extends PreferenceFragment {
     int count = 0;
 
     //int speed = 115200;
-    private void initSdk(final boolean reset) {
+    public void initSdk(final boolean reset) {
         // Config the SDK base info
-        mSys.showLog(getPreferenceManager().getSharedPreferences().getBoolean(getString(R.string.key_show_log), true));
-        if (mDialogInit == null) {
-            mDialogInit = (ProgressDialog) DialogUtils.showProgress(mActivity, getString(R.string.title_waiting), getString(R.string.msg_init));
-        } else if (!mDialogInit.isShowing()) {
-            mDialogInit.show();
-        }
+       // mSys.showLog(getPreferenceManager().getSharedPreferences().getBoolean(getString(R.string.key_show_log), true));
+//        if (mDialogInit == null) {
+////            mDialogInit = (ProgressDialog) DialogUtils.showProgress(mActivity, getString(R.string.title_waiting), getString(R.string.msg_init));
+//        } else if (!mDialogInit.isShowing()) {
+//            mDialogInit.show();
+//        }
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -605,13 +605,13 @@ public class SettingsFragment extends PreferenceFragment {
                 mSys.setUartSpeed(speed);
                 final int i = mSys.sdkInit();
                 if (i == SdkResult.SDK_OK) {
-                    setDeviceInfo();
+//                     setDeviceInfo();
                 }
                 if (reset && ++count < 2 && i == SdkResult.SDK_OK && mSys.getCurSpeed() != 460800) {
                     Log.d(TAG, "switch baud rate, cur speed = " + mSys.getCurSpeed());
                     int ret = mSys.setDeviceBaudRate();
                     if (ret != SdkResult.SDK_OK) {
-                        DialogUtils.show(getActivity(), "SwitchBaudRate error: " + ret);
+                       // DialogUtils.show(getActivity(), "SwitchBaudRate error: " + ret);
                     }
                     mSys.sysPowerOff();
                     initSdk();
@@ -625,7 +625,7 @@ public class SettingsFragment extends PreferenceFragment {
                                 mDialogInit.dismiss();
                             Log.d(TAG, "Cur speed: " + mSys.getCurSpeed());
                             if (BuildConfig.DEBUG && mSys.getConnectType() == ConnectTypeEnum.COM) {
-                                DialogUtils.show(getActivity(), "Cur speed: " + mSys.getCurSpeed());
+                              //  DialogUtils.show(getActivity(), "Cur speed: " + mSys.getCurSpeed());
                             }
                             String initRes = (i == SdkResult.SDK_OK) ? getString(R.string.init_success) : SDK_Result.obtainMsg(mActivity, i);
 
@@ -668,7 +668,7 @@ public class SettingsFragment extends PreferenceFragment {
             }
         }
 
-        Map<String, String> map = SystemInfoUtils.getImeiAndMeid(mActivity.getApplicationContext());
+         Map<String, String> map = SystemInfoUtils.getImeiAndMeid(mActivity.getApplicationContext());
         String imei1 = map.get("imei1");
         String imei2 = map.get("imei2");
         String meid = map.get("meid");

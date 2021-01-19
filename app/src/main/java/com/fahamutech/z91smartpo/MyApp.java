@@ -19,6 +19,12 @@ public class MyApp extends Application {
 
         Config.init(this)
                 .setUpdate();
+//        new SettingsFragment().initSdk();
+//        new Z91PrinterPlugin()
+//                .printText("Hello, World\n\n\n\n\n\n\\n\n\n\n\n\n\n");
+//
+//        new Z91PrinterPlugin()
+//                .printQr("Hello");
 
     }
 }

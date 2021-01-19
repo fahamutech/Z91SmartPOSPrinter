@@ -44,7 +44,17 @@ public class MainActivity extends BaseActivity {
             getFragmentManager().beginTransaction().add(R.id.frame_container, fragment).commit();
         UpdateBuilder.create().check();
 
-        new Z91PrinterPlugin().printText("Hello, World",  this);
+        final Z91PrinterPlugin z91PrinterPlugin = new Z91PrinterPlugin();
+        z91PrinterPlugin.init();
+        findViewById(R.id.btn_print).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                z91PrinterPlugin.printText("Hello, World\n");
+                z91PrinterPlugin.printQr("Hello");
+            }
+        });
+
     }
 
     @Override
