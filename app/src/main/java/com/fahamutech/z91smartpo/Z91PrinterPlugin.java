@@ -37,7 +37,7 @@ public class Z91PrinterPlugin {
         this.initSdk(false);
     }
 
-    Z91PrinterPlugin(){
+    public Z91PrinterPlugin(){
         // this.init();
     }
 
