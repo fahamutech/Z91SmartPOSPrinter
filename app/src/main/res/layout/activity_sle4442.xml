@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SLE4442Activity">
+    tools:context="com.fahamutech.z91smartpo.SLE4442Activity">
 
     <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"

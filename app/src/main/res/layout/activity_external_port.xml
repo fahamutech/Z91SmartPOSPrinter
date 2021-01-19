@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ExternalPortActivity">
+    tools:context="com.fahamutech.z91smartpo.ExternalPortActivity">
 
     <Button
         android:id="@+id/btn_one_click_test"
