@@ -39,10 +39,10 @@ public class MainActivity extends BaseActivity {
         if (actionBar != null) {
             actionBar.setTitle(getString(R.string.pref_settings));
         }
-        Fragment fragment = new SettingsFragment();
-        if (savedInstanceState == null)
-            getFragmentManager().beginTransaction().add(R.id.frame_container, fragment).commit();
-        UpdateBuilder.create().check();
+//        Fragment fragment = new SettingsFragment();
+//        if (savedInstanceState == null)
+//            getFragmentManager().beginTransaction().add(R.id.frame_container, fragment).commit();
+//        UpdateBuilder.create().check();
 
         final Z91PrinterPlugin z91PrinterPlugin = new Z91PrinterPlugin();
         z91PrinterPlugin.init();
@@ -63,15 +63,15 @@ public class MainActivity extends BaseActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_item_scan:
-                showVerifyDialog();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.menu_item_scan:
+//                showVerifyDialog();
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     private void showVerifyDialog() {
         final View view = LayoutInflater.from(this).inflate(R.layout.view_dialog, null);

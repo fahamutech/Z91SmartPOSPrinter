@@ -33,7 +33,7 @@ public class Z91PrinterPlugin {
     public void init() {
         mSingleThreadExecutor = mDriverManager.getSingleThreadExecutor();
         mPrinter = mDriverManager.getPrinter();
-        new SettingsFragment().initSdk(false);
+        // new SettingsFragment().initSdk(false);
         this.initSdk(false);
     }
 

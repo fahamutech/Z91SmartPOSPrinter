@@ -33,39 +33,39 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.fahamutech.z91smartpo.Ntagctivity">
-        </activity>
-        <activity
-            android:name="com.fahamutech.z91smartpo.MainActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+<!--        <activity android:name="com.fahamutech.z91smartpo.Ntagctivity">-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="com.fahamutech.z91smartpo.MainActivity"-->
+<!--            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden"-->
+<!--            android:windowSoftInputMode="adjustPan|stateHidden">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.zcs.sdk.pin.pinpad.PinPadPasswordActivity"
-            android:theme="@style/Theme.WindowActivity">
-        </activity>
-        <activity android:name="com.fahamutech.z91smartpo.qr.QRTestActivity"/>
-        <activity android:name="com.fahamutech.z91smartpo.TestActivity"/>
-        <activity android:name="com.google.zxing.client.android.CaptureActivity"/>
-        <activity android:name="com.fahamutech.z91smartpo.ExternalPortActivity"/>
-        <activity android:name="com.fahamutech.z91smartpo.FingerprintActivity"/>
-        <activity android:name="com.fahamutech.z91smartpo.scan.ScanActivity"/> <!-- 7.0 -->
-        <provider
-            android:name="com.fahamutech.z91smartpo.utils.update.util.UpdateInstallProvider"
-            android:authorities="update.plugin.${applicationId}.UpdateInstallProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-        </provider>
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="com.zcs.sdk.pin.pinpad.PinPadPasswordActivity"-->
+<!--            android:theme="@style/Theme.WindowActivity">-->
+<!--        </activity>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.qr.QRTestActivity"/>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.TestActivity"/>-->
+<!--        <activity android:name="com.google.zxing.client.android.CaptureActivity"/>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.ExternalPortActivity"/>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.FingerprintActivity"/>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.scan.ScanActivity"/> &lt;!&ndash; 7.0 &ndash;&gt;-->
+<!--        <provider-->
+<!--            android:name="com.fahamutech.z91smartpo.utils.update.util.UpdateInstallProvider"-->
+<!--            android:authorities="update.plugin.${applicationId}.UpdateInstallProvider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--        </provider>-->
 
-        <activity android:name="com.fahamutech.z91smartpo.SLE4442Activity">
-        </activity>
-        <activity android:name="com.fahamutech.z91smartpo.SLE4428Activity"/>
-        <activity android:name="com.fahamutech.z91smartpo.EmvActivity"/>
+<!--        <activity android:name="com.fahamutech.z91smartpo.SLE4442Activity">-->
+<!--        </activity>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.SLE4428Activity"/>-->
+<!--        <activity android:name="com.fahamutech.z91smartpo.EmvActivity"/>-->
     </application>
 
 </manifest>
