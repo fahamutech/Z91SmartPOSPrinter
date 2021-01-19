@@ -67,7 +67,6 @@ public class BitmapUtil {
     /**
      * 生成一个二维码图像
      *
-     * @param url
      *            传入的字符串，通常是一个URL
      * @param widthAndHeight
      *           图像的宽高
